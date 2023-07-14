@@ -1,29 +1,28 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <div><header-element /> <router-view /></div>
 </template>
 
 <script>
-export default {};
+import HeaderElement from "@/components/HeaderElement.vue";
+
+export default {
+  components: {
+    HeaderElement,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
 /*Обнуление*/
 * {
   padding: 0;
   margin: 0;
-  /* border: 0; */
+  border: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #edf6fa;
 }
 
 a:focus,
@@ -56,11 +55,11 @@ ul {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-}
+} */
 
 [class*="__container"] {
-  max-width: 1177px;
+  max-width: 1130px;
   margin: 0px auto;
-  padding: 0px 15px;
-} */
+  /* padding: 0px 15px; */
+}
 </style>

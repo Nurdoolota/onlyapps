@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <div class="form">
-      <label>{{ label }}</label>
-      <input :value="value" @input="input" type="text" />
-    </div>
+  <div class="form-input">
+    <input
+      class="form-input__input"
+      :value="value"
+      @input="input"
+      :type="type"
+      :placeholder="placeholderInput"
+    />
   </div>
 </template>
 
@@ -11,8 +14,19 @@
 export default {
   name: "FormInput",
   props: {
-    value: String,
+    value: {
+      type: String,
+      default: "",
+    },
     label: {
+      type: String,
+      default: "",
+    },
+    type: {
+      type: String,
+      default: "text",
+    },
+    placeholderInput: {
       type: String,
       default: "",
     },
@@ -26,9 +40,20 @@ export default {
 </script>
 
 <style scoped>
-.form {
+.form-input {
+}
+.form-input__input {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 17px 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #212529;
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 1px 1px 100px 0px rgba(0, 0, 0, 0.08);
+}
+
+.text-field__input {
 }
 </style>
