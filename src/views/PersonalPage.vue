@@ -53,6 +53,79 @@
         <form-button label="Создать" @click="validateAndCreate" type="submit" />
       </template>
     </modal-window>
+    <div class="personal">
+      <div class="personal__info">
+        <div class="personal__image">
+          <a href="#" class="editor-image">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_17_263)">
+                <rect x="9" y="9" width="36" height="36" rx="18" fill="white" />
+                <path
+                  d="M33.27 24.4137L29.5493 20.7315L30.775 19.5041C31.1106 19.168 31.5229 19 32.012 19C32.5011 19 32.9132 19.168 33.2482 19.5041L34.4738 20.7315C34.8094 21.0676 34.9845 21.4732 34.9991 21.9484C35.0137 22.4236 34.8532 22.8289 34.5176 23.1644L33.27 24.4137ZM32.0006 25.7068L22.7207 35H19V31.274L28.2799 21.9808L32.0006 25.7068Z"
+                  fill="#4640DE"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_17_263"
+                  x="0"
+                  y="0"
+                  width="56"
+                  height="56"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dx="1" dy="1" />
+                  <feGaussianBlur stdDeviation="5" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_17_263"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_17_263"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="personal__name">afds faslk</div>
+        <div class="personal__date_of_registration">24/42/3</div>
+        <div class="personal__inpu">
+          <form-input placeholderInput="email" class="personal__input" />
+          <form-input placeholderInput="group" class="personal__input" />
+          <form-input placeholderInput="direction" class="personal__input" />
+        </div>
+
+        <!-- <div class="personal__email"></div>
+      <div class="personal__group"></div>
+      <div class="personal__direction"></div> -->
+      </div>
+      <div class="personal__courses"></div>
+    </div>
+
     <form-button
       class="courses__button"
       @click="$router.push({ name: 'courses' })"
@@ -179,5 +252,78 @@ export default {
 
 .courses__item:not(:last-child) {
   margin: 0px 0px 10px 0px;
+}
+.personal {
+  display: flex;
+}
+.personal__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 420px;
+  flex-shrink: 0;
+  width: 420px;
+  margin-right: 50px;
+  padding: 40px 42px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 100px 0px rgba(0, 0, 0, 0.08);
+}
+
+.personal__courses {
+  display: inline-flex;
+  padding: 40px 74px 68px 75px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: var(--white, #fff);
+  box-shadow: 1px 1px 100px 0px rgba(0, 0, 0, 0.08);
+  width: 580px;
+  background-color: yellow;
+}
+
+.personal__image {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: url(https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png),
+    lightgray -86.705px -0.028px / 154.915% 100.024% no-repeat;
+}
+
+.editor-image {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 36px;
+  height: 36px;
+}
+
+.personal__name {
+  margin-top: 40px;
+  color: #000;
+  font-family: Gadugi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.personal__date_of_registration {
+  margin: 10px 0 10px 0;
+  padding: 10px 15px;
+  align-items: center;
+  border-radius: 100px;
+  background: rgba(130, 219, 218, 0.2);
+  color: var(--black-blue, #202430);
+  font-family: Gadugi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.personal__input {
+  margin-top: 20px;
 }
 </style>
