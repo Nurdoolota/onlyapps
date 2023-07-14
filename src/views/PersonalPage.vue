@@ -56,6 +56,7 @@
     <div class="personal">
       <div class="personal__info">
         <div class="personal__image">
+          <img src="../assets/smesharik.png" alt="" />
           <a href="#" class="editor-image">
             <img src="../assets/pencil.svg" alt="" />
           </a>
@@ -236,16 +237,18 @@ export default {
   position: relative;
   width: 220px;
   height: 220px;
+}
+
+.personal__image img {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: url(https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png),
-    lightgray -86.705px -0.028px / 154.915% 100.024% no-repeat;
 }
 
 .editor-image {
   position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 36px;
+  right: 0;
+  top: 5px;
   border-radius: 50%;
   /* background-color: black; */
 }
