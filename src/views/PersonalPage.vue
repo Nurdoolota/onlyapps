@@ -57,58 +57,7 @@
       <div class="personal__info">
         <div class="personal__image">
           <a href="#" class="editor-image">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-            >
-              <g filter="url(#filter0_d_17_263)">
-                <rect x="9" y="9" width="36" height="36" rx="18" fill="white" />
-                <path
-                  d="M33.27 24.4137L29.5493 20.7315L30.775 19.5041C31.1106 19.168 31.5229 19 32.012 19C32.5011 19 32.9132 19.168 33.2482 19.5041L34.4738 20.7315C34.8094 21.0676 34.9845 21.4732 34.9991 21.9484C35.0137 22.4236 34.8532 22.8289 34.5176 23.1644L33.27 24.4137ZM32.0006 25.7068L22.7207 35H19V31.274L28.2799 21.9808L32.0006 25.7068Z"
-                  fill="#4640DE"
-                />
-              </g>
-              <defs>
-                <filter
-                  id="filter0_d_17_263"
-                  x="0"
-                  y="0"
-                  width="56"
-                  height="56"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="1" dy="1" />
-                  <feGaussianBlur stdDeviation="5" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_17_263"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_17_263"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
+            <img src="../assets/pencil.svg" alt="" />
           </a>
         </div>
         <div class="personal__name">afds faslk</div>
@@ -255,6 +204,7 @@ export default {
 }
 .personal {
   display: flex;
+  padding: 60px 120px;
 }
 .personal__info {
   display: flex;
@@ -293,10 +243,11 @@ export default {
 
 .editor-image {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 15px;
+  top: 15px;
   width: 36px;
-  height: 36px;
+  border-radius: 50%;
+  /* background-color: black; */
 }
 
 .personal__name {
